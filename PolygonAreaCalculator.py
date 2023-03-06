@@ -83,12 +83,6 @@ class Rectangle:
         return times
 
 
-# rectangle1 = Rectangle(width=5, height=10)
-#
-# rectangle2 = Rectangle(2.5, 6)
-# print(rectangle1.get_amount_inside(rectangle2))
-
-
 class Square(Rectangle):
     def __init__(self, side):
         self.height = side
@@ -118,25 +112,3 @@ class Square(Rectangle):
         self.width = super().set_height(height)
         self.height = super().set_width(height)
         self.side = height
-
-
-rect = Rectangle(10, 5)
-sq = Square(9)
-print(sq.set_height(10))
-print(rect.get_area())
-rect.set_height(3)
-print(rect.get_perimeter())
-print(rect)
-print(rect.get_picture())
-
-sq = Square(9)
-print(sq.get_area())
-sq.set_side(4)
-print(sq.get_diagonal())
-print(sq)
-print(sq.get_picture())
-
-rect.set_height(8)
-rect.set_width(16)
-print(rect)
-print(rect.get_amount_inside(sq))
